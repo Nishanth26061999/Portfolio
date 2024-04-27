@@ -23,12 +23,12 @@ const links = [
         type: 'initials',
         to: '',
         active: 'home'
-    },
-    {
-        name: 'Portfolio',
-        to: 'portfolio',
-        active: 'portfolio'
     }
+    // {
+    //     name: 'Portfolio',
+    //     to: 'portfolio',
+    //     active: 'portfolio'
+    // }
 ]
 
 // This function is used to create a scroll offset to compensate for the navbar
@@ -46,7 +46,7 @@ export default function Navbar({ darkMode, handleClick, active, setActive }) {
         <Box component={'nav'} width={'100%'} position={singlePage ? 'fixed' : 'relative'} className={darkMode? Style.dark : Style.light}>
             <Box component={'ul'} display={'flex'} justifyContent={'center'} alignItems={'center'}
                 gap={{ xs: '2rem', md: '8rem' }}
-                textTransform={'lowercase'} fontSize={'1rem'}>
+                 fontSize={'1rem'}>
                 {links.map((link, index) => (
                     <Box key={index} component={'li'} className={(link.active === active && !link.type) && Style.active}
                         sx={{ borderImageSource: info.gradient }}>
