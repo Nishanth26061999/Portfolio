@@ -12,7 +12,7 @@ export default function BaseLayout() {
   const location = useLocation();
 
   const [active, setActive] = useState(
-    location.pathname === "/"
+    location.pathname === "/Portfolio/home "
       ? "home"
       : location.pathname.slice(1, location.pathname.length),
   );

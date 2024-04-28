@@ -10,19 +10,19 @@ import { singlePage } from '../info/Info';
 const links = [
     {
         name: 'Home',
-        to: '',
-        active: 'home'
+        to: 'Portfolio/',
+        active: 'Portfolio/home'
     },
     {
         name: 'About Me',
-        to: 'about',
-        active: 'about'
+        to: 'Portfolio/about',
+        active: 'Portfolio/about'
     },
     {
         name: info.initials,
         type: 'initials',
-        to: '',
-        active: 'home'
+        to: 'Portfolio/home',
+        active: 'Portfolio/home'
     }
     // {
     //     name: 'Portfolio',
