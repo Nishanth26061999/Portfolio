@@ -7,6 +7,7 @@ import { Box } from "@mui/material";
 import { info } from "../info/Info";
 import { singlePage } from '../info/Info';
 
+
 const links = [
     {
         name: 'Home',
@@ -23,12 +24,12 @@ const links = [
         type: 'initials',
         to: 'Portfolio/home',
         active: 'Portfolio/home'
+    },
+    {
+        name: 'Resume',
+        to: '',
+        active: ''
     }
-    // {
-    //     name: 'Portfolio',
-    //     to: 'portfolio',
-    //     active: 'portfolio'
-    // }
 ]
 
 // This function is used to create a scroll offset to compensate for the navbar
@@ -50,7 +51,7 @@ export default function Navbar({ darkMode, handleClick, active, setActive }) {
                 {links.map((link, index) => (
                     <Box key={index} component={'li'} className={(link.active === active && !link.type) && Style.active}
                         sx={{ borderImageSource: info.gradient }}>
-                        <Link to={singlePage ? `#${link.to}` : `/${link.to}`}
+                        <Link to={link.name!='Resume' ? `/${link.to}`:`/nishanth_Resume.pdf`} target={link.name=='Resume'} download={link.name=='Resume'}
                         scroll={el => scrollWidthOffset(el)}
                             smooth
                             onClick={() => setActive(link.active)} className={Style.link}>
@@ -59,6 +60,7 @@ export default function Navbar({ darkMode, handleClick, active, setActive }) {
                         </Link>
                     </Box>
                 ))}
+            
                 <li>
                     <Toggler darkMode={darkMode} handleClick={handleClick} />
                 </li>

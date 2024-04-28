@@ -12,7 +12,7 @@ export default function BaseLayout() {
   const location = useLocation();
 
   const [active, setActive] = useState(
-    location.pathname === "/Portfolio/home "
+    location.pathname === "/Portfolio"
       ? "home"
       : location.pathname.slice(1, location.pathname.length),
   );
@@ -75,7 +75,7 @@ export default function BaseLayout() {
             <p>
               {" "}
               &hearts; by{" "}
-              <a href={"https://paytonpierce.dev"}>Nishanth Kumar</a>
+              <a href={"https://nishanth26061999.github.io/Portfolio/"}>Nishanth Kumar</a>
             </p>
             <p>&copy; {new Date().getFullYear()}</p>
           </Box>
